@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import os
+=======
+>>>>>>> resource-crud
 from flask import Flask
 from config import Config
 from extensions import db, migrate, bcrypt, jwt
