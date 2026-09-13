@@ -10,12 +10,9 @@ marshmallow = "*"
 flask-bcrypt = "*"
 flask-jwt-extended = "*"
 flask-cors = "*"
-<<<<<<< HEAD
 flask-migrate = "*"
 gunicorn = "*"
-=======
 faker = "*"
->>>>>>> seeding
 
 [dev-packages]
 
