@@ -1,5 +1,5 @@
 from app import create_app
-from extensions import db
+from extensions import db, bcrypt
 from models import User, Note
 from faker import Faker
 
@@ -11,8 +11,8 @@ with app.app_context():
     db.create_all()
 
     # Create a test user
-    user1 = User(username='user1', email='user1@example.com', password='password1')
-    user1.set_password = 'password1'
+    user1 = User(username='user1', email='user1@example.com')
+    user1._password_hash = bcrypt.generate_password_hash('password1').decode('utf-8')
     db.session.add(user1)
     db.session.commit()
 
